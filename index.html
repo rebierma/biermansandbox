@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMI675 Advanced Web Design Sandbox | Prof. Bierman</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .instructor {
+            color: #764ba2;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .intro {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status.upcoming {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status.active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status.completed {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .resources {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .resources h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+
+        .resource-list a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .resource-list a:hover {
+            color: #667eea;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            padding: 2rem 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MMI675 Advanced Web Design</h1>
+            <p class="subtitle">Student Project Sandbox</p>
+            <p class="instructor">Professor Robert Bierman | S.I. Newhouse School of Public Communications</p>
+        </header>
+
+        <section class="intro">
+            <h2>Welcome to the Sandbox</h2>
+            <p>This space showcases student work from Syracuse University's graduate-level Advanced Web Design course. Here you'll find projects that demonstrate the integration of modern web technologies, AI-assisted development, and product thinking for digital communications professionals.</p>
+            <p>Our curriculum emphasizes hands-on learning, real-world application building, and the practical use of contemporary development tools and frameworks.</p>
+        </section>
+
+        <section class="projects-grid">
+            <div class="project-card">
+                <h3>HTML/CSS Fundamentals</h3>
+                <span class="status completed">Completed</span>
+                <p>Building responsive layouts with semantic HTML5 and modern CSS techniques including Flexbox and Grid.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">Responsive Design</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>JavaScript Interactivity</h3>
+                <span class="status active">In Progress</span>
+                <p>Adding dynamic functionality and user interactions using vanilla JavaScript and modern ES6+ features.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">DOM Manipulation</span>
+                    <span class="tech-badge">ES6+</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>AI-Assisted Development</h3>
+                <span class="status active">In Progress</span>
+                <p>Leveraging AI tools for code generation, debugging, and rapid prototyping while maintaining code quality.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Claude</span>
+                    <span class="tech-badge">GitHub Copilot</span>
+                    <span class="tech-badge">Prompt Engineering</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Three-Tier Architecture</h3>
+                <span class="status upcoming">Upcoming</span>
+                <p>Understanding client-server architecture, APIs, and database integration for full-stack applications.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">APIs</span>
+                    <span class="tech-badge">Backend Integration</span>
+                    <span class="tech-badge">Databases</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>React Applications</h3>
+                <span class="status upcoming">Upcoming</span>
+                <p>Building component-based user interfaces with React, focusing on state management and modern hooks.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Components</span>
+                    <span class="tech-badge">Hooks</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Final Portfolio Project</h3>
+                <span class="status upcoming">Upcoming</span>
+                <p>Capstone project demonstrating mastery of web development concepts and product management skills.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Full Stack</span>
+                    <span class="tech-badge">Product Design</span>
+                    <span class="tech-badge">Deployment</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2>Course Resources</h2>
+            <ul class="resource-list">
+                <li><a href="#">Course Syllabus & Schedule</a></li>
+                <li><a href="#">Lecture Slides & Materials</a></li>
+                <li><a href="#">Code Examples & Templates</a></li>
+                <li><a href="#">Recommended Tools & Documentation</a></li>
+                <li><a href="#">Student Project Gallery</a></li>
+                <li><a href="#">Office Hours & Support</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Syracuse University | S.I. Newhouse School of Public Communications</p>
+            <p>MMI675 Advanced Web Design</p>
+        </footer>
+    </div>
+</body>
+</html>
